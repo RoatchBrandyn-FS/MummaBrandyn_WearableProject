@@ -199,6 +199,13 @@
                                 <rect key="frame" x="757" y="5" width="90" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" systemColor="systemTealColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa8-pw-I4z">
+                                <rect key="frame" x="49" y="5" width="90" height="47"/>
+                                <color key="tintColor" systemColor="systemTealColor"/>
                                 <state key="normal">
                                     <imageReference key="image" image="questionmark.circle" catalog="system" symbolScale="large"/>
                                 </state>
@@ -214,9 +221,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oPq-jG-Tv8" secondAttribute="trailing" constant="5" id="MDn-0x-ovW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mRB-px-V2j" secondAttribute="trailing" constant="5" id="MJi-c6-uCg"/>
                             <constraint firstItem="b9G-JT-Bok" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.42" id="ObE-yY-4J4"/>
+                            <constraint firstItem="Fa8-pw-I4z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="Ofr-Qg-ofn"/>
                             <constraint firstItem="mRB-px-V2j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="Xd0-NA-IRA"/>
                             <constraint firstItem="oPq-jG-Tv8" firstAttribute="top" secondItem="mRB-px-V2j" secondAttribute="bottom" constant="5" id="arc-Qx-U1W"/>
                             <constraint firstItem="mRB-px-V2j" firstAttribute="leading" secondItem="jVG-UN-5j2" secondAttribute="trailing" constant="5" id="avy-gH-K91"/>
+                            <constraint firstItem="Fa8-pw-I4z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="eE3-GP-KD7"/>
+                            <constraint firstItem="b9G-JT-Bok" firstAttribute="top" secondItem="Fa8-pw-I4z" secondAttribute="bottom" constant="5" id="efE-eE-80x"/>
+                            <constraint firstItem="jVG-UN-5j2" firstAttribute="leading" secondItem="Fa8-pw-I4z" secondAttribute="trailing" constant="5" id="f0v-ih-ctz"/>
                             <constraint firstItem="b9G-JT-Bok" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="hpj-jd-Ubs"/>
                             <constraint firstItem="jVG-UN-5j2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="o0j-gP-BYs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b9G-JT-Bok" secondAttribute="bottom" constant="5" id="q7X-OM-2z0"/>
