@@ -19,7 +19,32 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="90" y="345"/>
+        </scene>
+        <!--Interface Controller Player1-->
+        <scene sceneID="y2F-QD-kRP">
+            <objects>
+                <controller id="2iJ-vR-C28" customClass="InterfaceController_Player1" customModule="Wearableroject_Watch_Extension">
+                    <items>
+                        <label alignment="left" text="Player 1" id="Lur-5x-ylj"/>
+                    </items>
+                    <connections>
+                        <segue destination="WfL-Bc-Ekn" kind="relationship" relationship="nextPage" id="1m5-x7-fo5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="526" y="345"/>
+        </scene>
+        <!--Interface Controller Player2-->
+        <scene sceneID="sZZ-lR-uAS">
+            <objects>
+                <controller id="WfL-Bc-Ekn" customClass="InterfaceController_Player2" customModule="Wearableroject_Watch_Extension">
+                    <items>
+                        <label alignment="left" text="Player 2" id="fwN-Bc-vAK"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="812" y="345"/>
         </scene>
     </scenes>
 </document>

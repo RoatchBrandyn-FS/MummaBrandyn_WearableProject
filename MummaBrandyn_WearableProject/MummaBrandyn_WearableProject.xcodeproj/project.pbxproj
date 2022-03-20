@@ -16,6 +16,8 @@
 		5D1BB7FD27E6C37600DD6957 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BB7FC27E6C37600DD6957 /* ComplicationController.swift */; };
 		5D1BB7FF27E6C37600DD6957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1BB7FE27E6C37600DD6957 /* Assets.xcassets */; };
 		5D1BB80427E6C37600DD6957 /* Wearableroject_Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5D1BB7E527E6C37500DD6957 /* Wearableroject_Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5D73F4FA27E716BF00D8E17F /* InterfaceController_Player1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D73F4F927E716BF00D8E17F /* InterfaceController_Player1.swift */; };
+		5D73F4FF27E716CF00D8E17F /* InterfaceController_Player2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D73F4FE27E716CF00D8E17F /* InterfaceController_Player2.swift */; };
 		5DE62C4327E411D40095D1AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE62C4227E411D40095D1AF /* AppDelegate.swift */; };
 		5DE62C4527E411D40095D1AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE62C4427E411D40095D1AF /* SceneDelegate.swift */; };
 		5DE62C4727E411D40095D1AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE62C4627E411D40095D1AF /* ViewController.swift */; };
@@ -79,6 +81,8 @@
 		5D1BB7FE27E6C37600DD6957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1BB80027E6C37600DD6957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D1BB80127E6C37600DD6957 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		5D73F4F927E716BF00D8E17F /* InterfaceController_Player1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController_Player1.swift; sourceTree = "<group>"; };
+		5D73F4FE27E716CF00D8E17F /* InterfaceController_Player2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController_Player2.swift; sourceTree = "<group>"; };
 		5DE62C3F27E411D40095D1AF /* MummaBrandyn_WearableProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MummaBrandyn_WearableProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE62C4227E411D40095D1AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DE62C4427E411D40095D1AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				5D1BB7FE27E6C37600DD6957 /* Assets.xcassets */,
 				5D1BB80027E6C37600DD6957 /* Info.plist */,
 				5D1BB80127E6C37600DD6957 /* PushNotificationPayload.apns */,
+				5D73F4F927E716BF00D8E17F /* InterfaceController_Player1.swift */,
+				5D73F4FE27E716CF00D8E17F /* InterfaceController_Player2.swift */,
 			);
 			path = "Wearableroject_Watch Extension";
 			sourceTree = "<group>";
@@ -298,6 +304,8 @@
 			files = (
 				5D1BB7FB27E6C37600DD6957 /* NotificationController.swift in Sources */,
 				5D1BB7FD27E6C37600DD6957 /* ComplicationController.swift in Sources */,
+				5D73F4FA27E716BF00D8E17F /* InterfaceController_Player1.swift in Sources */,
+				5D73F4FF27E716CF00D8E17F /* InterfaceController_Player2.swift in Sources */,
 				5D1BB7F927E6C37600DD6957 /* ExtensionDelegate.swift in Sources */,
 				5D1BB7F727E6C37600DD6957 /* InterfaceController.swift in Sources */,
 			);
