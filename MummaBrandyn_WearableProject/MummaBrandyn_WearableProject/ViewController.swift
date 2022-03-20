@@ -10,7 +10,11 @@ import WatchConnectivity
 
 class ViewController: UIViewController, WCSessionDelegate {
     
-
+    //outlets
+    @IBOutlet weak var connectionView: UIView!
+    @IBOutlet weak var connectionLabel: UILabel!
+    
+    
     //variables
     let session = WCSession.default
     
@@ -25,6 +29,14 @@ class ViewController: UIViewController, WCSessionDelegate {
             session.activate()
         }
         
+        
+    }
+    
+    //methods
+    private func updateConnection() {
+        
+        connectionView.backgroundColor = UIColor.init(named: "ConnectionViewGreen")
+        connectionLabel.text = "Device Connected"
         
     }
 
@@ -46,6 +58,18 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     func sessionDidDeactivate(_ session: WCSession) {
         print("Session went deactivated")
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        if (message["getData"] as? Bool) != nil {
+            print("Should send Data")
+            
+            DispatchQueue.main.async {
+                self.updateConnection()
+            }
+            
+            
+        }
     }
     
     

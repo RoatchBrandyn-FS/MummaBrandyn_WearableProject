@@ -34,6 +34,12 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         print("Should Connect")
         session.activate()
         
+        let message: [String: Any] = ["getData": true]
+        
+        if session.isReachable{
+            session.sendMessage(message, replyHandler: nil, errorHandler: nil)
+        }
+        
     }
     
     
