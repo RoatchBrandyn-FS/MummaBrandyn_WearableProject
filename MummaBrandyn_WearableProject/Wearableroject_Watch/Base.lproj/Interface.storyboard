@@ -16,35 +16,21 @@
                                 <action selector="connectAction" destination="AgC-eL-Hgc" id="jIb-ME-tYY"/>
                             </connections>
                         </button>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="90" y="345"/>
-        </scene>
-        <!--Interface Controller Player1-->
-        <scene sceneID="y2F-QD-kRP">
-            <objects>
-                <controller id="2iJ-vR-C28" customClass="InterfaceController_Player1" customModule="Wearableroject_Watch_Extension">
-                    <items>
-                        <label alignment="left" text="Player 1" id="Lur-5x-ylj"/>
+                        <button width="1" alignment="left" title="PLAYER 1" id="6Ln-qc-xvG">
+                            <color key="backgroundColor" red="1" green="0.2311497927" blue="0.18824437259999999" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <button width="1" alignment="left" title="PLAYER 2" id="ze2-yy-gug">
+                            <color key="backgroundColor" red="0.0" green="0.47945117949999999" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
                     </items>
                     <connections>
-                        <segue destination="WfL-Bc-Ekn" kind="relationship" relationship="nextPage" id="1m5-x7-fo5"/>
+                        <outlet property="connectBtn" destination="1A3-ed-tn7" id="yhG-hW-1mC"/>
+                        <outlet property="p1Btn" destination="6Ln-qc-xvG" id="EwO-HJ-KJb"/>
+                        <outlet property="p2Btn" destination="ze2-yy-gug" id="1oh-qO-caN"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="526" y="345"/>
-        </scene>
-        <!--Interface Controller Player2-->
-        <scene sceneID="sZZ-lR-uAS">
-            <objects>
-                <controller id="WfL-Bc-Ekn" customClass="InterfaceController_Player2" customModule="Wearableroject_Watch_Extension">
-                    <items>
-                        <label alignment="left" text="Player 2" id="fwN-Bc-vAK"/>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="812" y="345"/>
+            <point key="canvasLocation" x="90" y="345"/>
         </scene>
     </scenes>
 </document>

@@ -17,6 +17,8 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     //variables
     let session = WCSession.default
+    var player1Score: Int = 0
+    var player2Score: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,10 @@ class ViewController: UIViewController, WCSessionDelegate {
         
         connectionView.backgroundColor = UIColor.init(named: "ConnectionViewGreen")
         connectionLabel.text = "Device Connected"
+        
+    }
+    
+    private func getPlayerScores(){
         
     }
 

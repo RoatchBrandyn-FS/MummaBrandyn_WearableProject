@@ -11,11 +11,21 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
+    //outlets
+    @IBOutlet weak var p1Btn: WKInterfaceButton!
+    @IBOutlet weak var p2Btn: WKInterfaceButton!
+    @IBOutlet weak var connectBtn: WKInterfaceButton!
     
+    
+    
+    //Variables
     let session  = WCSession.default
+    var player1Score: Int = 0
+    var player2Score: Int = 0
 
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
+        disablePlayerBtns()
         
         session.delegate = self
     }
@@ -37,8 +47,31 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         let message: [String: Any] = ["getData": true]
         
         if session.isReachable{
+            print("Phone Reachable")
+            
+            enablePlayerBtns()
             session.sendMessage(message, replyHandler: nil, errorHandler: nil)
         }
+        else{
+            disablePlayerBtns()
+        }
+    }
+    
+    //methods
+    private func disablePlayerBtns() {
+        self.p1Btn.setEnabled(false)
+        self.p2Btn.setEnabled(false)
+        
+        self.connectBtn.setEnabled(true)
+    }
+    
+    private func enablePlayerBtns() {
+        //enable players if connected to phone
+        self.p1Btn.setEnabled(true)
+        self.p2Btn.setEnabled(true)
+        
+        //turn off connect button
+        self.connectBtn.setEnabled(false)
         
     }
     
