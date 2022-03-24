@@ -202,6 +202,9 @@
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" systemColor="systemTealColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ACN-az-lJz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa8-pw-I4z">
                                 <rect key="frame" x="49" y="5" width="90" height="47"/>
@@ -239,6 +242,8 @@
                     <connections>
                         <outlet property="connectionLabel" destination="gDK-rf-PyU" id="pu0-eb-GFW"/>
                         <outlet property="connectionView" destination="jVG-UN-5j2" id="dMn-ms-oBj"/>
+                        <outlet property="player1Label" destination="EKl-wo-bMs" id="jfr-o8-TUL"/>
+                        <outlet property="player2Label" destination="veq-xe-NWN" id="VK5-Uz-As4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
