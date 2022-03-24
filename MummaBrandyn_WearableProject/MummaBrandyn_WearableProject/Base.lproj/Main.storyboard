@@ -57,12 +57,15 @@
                                                     <imageReference key="image" image="minus" catalog="system" symbolScale="large"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4g-tg-6md">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4g-tg-6md">
                                                 <rect key="frame" x="227.5" y="88.5" width="21.5" height="22"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="scoreBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jrD-OM-2Tp"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Score Change" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kqe-3Y-KCe">
                                                 <rect key="frame" x="140" y="23" width="97" height="34"/>
@@ -136,14 +139,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jY4-sd-ODJ" userLabel="View_Btns_P2">
                                         <rect key="frame" x="0.0" y="182" width="376.5" height="149"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66N-af-xLY">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66N-af-xLY">
                                                 <rect key="frame" x="227.5" y="88.5" width="21.5" height="22"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu1-Pl-vCY">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu1-Pl-vCY">
                                                 <rect key="frame" x="127.5" y="88.5" width="21.5" height="22"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <state key="normal">
@@ -260,6 +263,8 @@
                         <outlet property="connectionView" destination="jVG-UN-5j2" id="dMn-ms-oBj"/>
                         <outlet property="player1Label" destination="EKl-wo-bMs" id="jfr-o8-TUL"/>
                         <outlet property="player2Label" destination="veq-xe-NWN" id="VK5-Uz-As4"/>
+                        <outlet property="tFieldPlayer1" destination="Kqe-3Y-KCe" id="xR6-9E-pWt"/>
+                        <outlet property="tFieldPlayer2" destination="sq8-ww-Gnh" id="6gq-ao-KOa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

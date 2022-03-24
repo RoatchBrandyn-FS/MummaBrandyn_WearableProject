@@ -8,14 +8,16 @@
 import UIKit
 import WatchConnectivity
 
-class ViewController: UIViewController, WCSessionDelegate {
+class ViewController: UIViewController, WCSessionDelegate, UITextFieldDelegate {
     
     //outlets
     @IBOutlet weak var connectionView: UIView!
     @IBOutlet weak var connectionLabel: UILabel!
     @IBOutlet weak var player1Label: UILabel!
     @IBOutlet weak var player2Label: UILabel!
+    @IBOutlet weak var tFieldPlayer1: UITextField!
     
+    @IBOutlet weak var tFieldPlayer2: UITextField!
     
     //variables
     let session = WCSession.default
@@ -25,6 +27,9 @@ class ViewController: UIViewController, WCSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //set textfield delegates
+        self.tFieldPlayer1.delegate = self
         
         //watch connectivity
         if WCSession.isSupported() {
@@ -51,6 +56,20 @@ class ViewController: UIViewController, WCSessionDelegate {
         
     }
     
+    @IBAction func scoreBtnPressed(_ sender: UIButton){
+        switch  sender.tag {
+        case 1:
+            let newScore = tFieldPlayer1.text
+            
+            print("tField is: \(newScore)")
+            updatePlayer1ScorePlus(newScore: newScore!)
+            
+        default:
+            print("Button not set correctly")
+        }
+        
+    }
+    
     
     //methods
     private func updateConnection() {
@@ -60,6 +79,79 @@ class ViewController: UIViewController, WCSessionDelegate {
         
     }
     
+    private func updatePlayer1ScorePlus(newScore: String){
+        if let scoreNum = Int(newScore) {
+            let scoreTotal = scoreNum + player1Score
+            print("Score was Number: \(scoreNum)")
+            
+            player1Score = scoreTotal
+            player1Label.text = "\(player1Score)"
+        }
+        else{
+            print("Score wasn't number")
+            showEmptyAlert()
+        }
+        
+        tFieldPlayer1.text = ""
+        
+    }
+    
+    private func updatePlayer2ScorePlus(newScore: String){
+        let scoreNum = Int(newScore)
+        
+    }
+    
+    
+    private func setInitalScore() {
+        player1Label.text = "\(player1Score)"
+        player2Label.text = "\(player2Score)"
+    }
+    
+    //Textfield Callbacks
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        return textField.resignFirstResponder()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+
+    //WCSession callbacks
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        switch activationState {
+        case .activated:
+            print("Phone Activated")
+        case .notActivated:
+            print("Phone Not Activated")
+        case .inactive:
+            print("Phone Inactive")
+        }
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("Session went inactive")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        print("Session went deactivated")
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        if (message["getData"] as? Bool) != nil {
+            print("Should send Data")
+            
+            DispatchQueue.main.async {
+                self.updateConnection()
+            }
+            
+            
+        }
+    }
+    
+    //Alerts
     private func getPlayerScores(){
         
         let alert = UIAlertController(title: "Initial Score", message: "Enter in the initial scores for the players.", preferredStyle: .alert)
@@ -98,44 +190,15 @@ class ViewController: UIViewController, WCSessionDelegate {
         
     }
     
-    
-    private func setInitalScore() {
-        player1Label.text = "\(player1Score)"
-        player2Label.text = "\(player2Score)"
+    private func showEmptyAlert() {
+        
+        let alert = UIAlertController(title: "Problem Changing Score", message: "Either the input was empty or the value wasn't a number.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
     }
-
-    //WCSession callbacks
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        switch activationState {
-        case .activated:
-            print("Phone Activated")
-        case .notActivated:
-            print("Phone Not Activated")
-        case .inactive:
-            print("Phone Inactive")
-        }
-    }
-    
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        print("Session went inactive")
-    }
-    
-    func sessionDidDeactivate(_ session: WCSession) {
-        print("Session went deactivated")
-    }
-    
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        if (message["getData"] as? Bool) != nil {
-            print("Should send Data")
-            
-            DispatchQueue.main.async {
-                self.updateConnection()
-            }
-            
-            
-        }
-    }
-    
     
 }
 
