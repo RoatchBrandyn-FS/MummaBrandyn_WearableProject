@@ -158,7 +158,7 @@ class ViewController: UIViewController, WCSessionDelegate, UITextFieldDelegate {
                 player2Score = scoreTotal
             }
             
-            player2Label.text = "\(player1Score)"
+            player2Label.text = "\(player2Score)"
         }
         else{
             print("Score wasn't number")
