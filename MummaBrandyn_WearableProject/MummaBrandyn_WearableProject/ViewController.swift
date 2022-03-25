@@ -16,7 +16,6 @@ class ViewController: UIViewController, WCSessionDelegate, UITextFieldDelegate {
     @IBOutlet weak var player1Label: UILabel!
     @IBOutlet weak var player2Label: UILabel!
     @IBOutlet weak var tFieldPlayer1: UITextField!
-    
     @IBOutlet weak var tFieldPlayer2: UITextField!
     
     //variables
@@ -58,12 +57,18 @@ class ViewController: UIViewController, WCSessionDelegate, UITextFieldDelegate {
     
     @IBAction func scoreBtnPressed(_ sender: UIButton){
         switch  sender.tag {
+        case 0:
+            let newScore = tFieldPlayer1.text
+            updatePlayer1ScoreMinus(newScore: newScore!)
         case 1:
             let newScore = tFieldPlayer1.text
             
             print("tField is: \(newScore)")
             updatePlayer1ScorePlus(newScore: newScore!)
             
+        case 3:
+            let newScore = tFieldPlayer2.text
+            updatePlayer2ScorePlus(newScore: newScore!)
         default:
             print("Button not set correctly")
         }
@@ -79,6 +84,12 @@ class ViewController: UIViewController, WCSessionDelegate, UITextFieldDelegate {
         
     }
     
+    private func setInitalScore() {
+        player1Label.text = "\(player1Score)"
+        player2Label.text = "\(player2Score)"
+    }
+    
+    //score calcs
     private func updatePlayer1ScorePlus(newScore: String){
         if let scoreNum = Int(newScore) {
             let scoreTotal = scoreNum + player1Score
@@ -97,14 +108,64 @@ class ViewController: UIViewController, WCSessionDelegate, UITextFieldDelegate {
     }
     
     private func updatePlayer2ScorePlus(newScore: String){
-        let scoreNum = Int(newScore)
+        if let scoreNum = Int(newScore) {
+            let scoreTotal = scoreNum + player2Score
+            print("Score was Number: \(scoreNum)")
+            
+            player2Score = scoreTotal
+            player2Label.text = "\(player2Score)"
+        }
+        else{
+            print("Score wasn't number")
+            showEmptyAlert()
+        }
+        
+        tFieldPlayer2.text = ""
         
     }
     
+    private func updatePlayer1ScoreMinus(newScore: String){
+        if let scoreNum = Int(newScore) {
+            let scoreTotal = player1Score - scoreNum
+            print("Score was Number: \(scoreTotal)")
+            
+            if scoreTotal <= 0 {
+                player1Score = 0
+            }
+            else{
+                player1Score = scoreTotal
+            }
+            
+            player1Label.text = "\(player1Score)"
+        }
+        else{
+            print("Score wasn't number")
+            showEmptyAlert()
+        }
+        
+        tFieldPlayer1.text = ""
+    }
     
-    private func setInitalScore() {
-        player1Label.text = "\(player1Score)"
-        player2Label.text = "\(player2Score)"
+    private func updatePlayer2ScoreMinus(newScore: String){
+        if let scoreNum = Int(newScore) {
+            let scoreTotal = player2Score - scoreNum
+            print("Score was Number: \(scoreTotal)")
+            
+            if scoreTotal <= 0 {
+                player2Score = 0
+            }
+            else{
+                player2Score = scoreTotal
+            }
+            
+            player2Label.text = "\(player1Score)"
+        }
+        else{
+            print("Score wasn't number")
+            showEmptyAlert()
+        }
+        
+        tFieldPlayer2.text = ""
     }
     
     //Textfield Callbacks
