@@ -47,12 +47,22 @@
                         <label width="136" alignment="left" text="Player" textAlignment="center" id="Lez-o2-EOO">
                             <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
                         </label>
-                        <textField width="1" alignment="left" placeholder="Score Change" id="tTr-NV-uxG"/>
+                        <textField width="1" alignment="left" placeholder="Score Change" id="tTr-NV-uxG">
+                            <connections>
+                                <action selector="tfGetText:" destination="6O4-t9-VEU" id="OTG-lc-El1"/>
+                            </connections>
+                        </textField>
                         <button width="1" alignment="left" title="Add" id="lIH-oh-3Fj">
                             <color key="backgroundColor" name="PlusColor"/>
+                            <connections>
+                                <action selector="addPressed" destination="6O4-t9-VEU" id="05s-EM-tlV"/>
+                            </connections>
                         </button>
                         <button width="1" alignment="left" title="Deduct" id="o6F-lb-jz0">
                             <color key="backgroundColor" name="MinusColor"/>
+                            <connections>
+                                <action selector="deductButtonPressed" destination="6O4-t9-VEU" id="qF9-bw-STW"/>
+                            </connections>
                         </button>
                     </items>
                     <connections>

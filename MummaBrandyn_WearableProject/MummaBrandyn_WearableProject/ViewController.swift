@@ -212,8 +212,27 @@ class ViewController: UIViewController, WCSessionDelegate, UITextFieldDelegate {
             DispatchQueue.main.async {
                 self.updateConnection()
             }
+        }
+        else if (message["watchChangePlus"] as? Bool) != nil {
+            print("Should check for int before changing score")
+            DispatchQueue.main.async {
+                if let newScore: String = message["NewScore"] as? String {
+                    if (message["Player"] as? String) == "PLAYER 1"{
+                        print("Should change score for P1")
+                        
+                        self.updatePlayer1ScorePlus(newScore: newScore)
+                    }
+                    else if (message["Player"] as? String) == "PLAYER 2" {
+                        print("Should change score for P2")
+                        
+                        self.updatePlayer2ScorePlus(newScore: newScore)
+                    }
+                }
+            }
             
-            
+        }
+        else if (message["watchChangeMinus"] as? Bool) != nil {
+            print("Should check for int before changing score")
         }
     }
     

@@ -94,10 +94,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         var playerData: [String:Any] = [String: Any]()
         
         if segueIdentifier == "p1ToDetail"{
-            playerData = ["Name": "PLAYER 1"]
+            playerData = ["Name": "PLAYER 1", "Session": session]
         }
         else if segueIdentifier == "p2ToDetail"{
-            playerData = ["Name": "PLAYER 2"]
+            playerData = ["Name": "PLAYER 2", "Session": session]
         }
         
         return playerData

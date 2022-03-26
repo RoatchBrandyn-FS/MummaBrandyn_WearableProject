@@ -18,7 +18,9 @@ class DetailInterfaceController: WKInterfaceController {
     
     
     //variables
-    var mScore: Int = 0
+    var mSession: WCSession = WCSession.default
+    var scoreChange: String = ""
+    var currentPlayer = ""
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -30,10 +32,13 @@ class DetailInterfaceController: WKInterfaceController {
             if let data = context as? [String:Any]{
                 print(data["Name"] ?? "Didn't Get Data Correctly")
                 
-                guard let name = data["Name"] as? String
+                guard let name = data["Name"] as? String, let session = data["Session"]  as? WCSession
                 else{return}
                 
-                playerLabel.setText(name)
+                mSession = session
+                
+                currentPlayer = name
+                playerLabel.setText(currentPlayer)
             }
         }
     }
@@ -49,10 +54,45 @@ class DetailInterfaceController: WKInterfaceController {
     }
     
     //actions
+    @IBAction func tfGetText(_ value: NSString?) {
+        
+        if let tfText = value as String? {
+            print("Text Field Value: \(tfText)")
+            scoreChange = tfText
+        }
+        
+    }
+    
+    
+    @IBAction func addPressed() {
+        print("Add Button Pressed")
+        sendMessagePlus()
+    }
+    
+    @IBAction func deductButtonPressed() {
+        print("Deduct Button Pressed")
+        sendMessageMinus()
+    }
     
     
     //methods
+    private func sendMessagePlus(){
+        
+        if mSession.isReachable {
+            let message: [String:Any] = ["watchChangePlus": true, "NewScore": scoreChange, "Player": currentPlayer]
+                    
+            mSession.sendMessage(message, replyHandler: nil, errorHandler: nil)
+        }
+    }
     
-    
+    private func sendMessageMinus(){
+        
+        
+        if mSession.isReachable {
+            let message: [String:Any] = ["watchChangeMinus": true, "NewScore": scoreChange, "Player": currentPlayer]
+                    
+            mSession.sendMessage(message, replyHandler: nil, errorHandler: nil)
 
+        }
+    }
 }
