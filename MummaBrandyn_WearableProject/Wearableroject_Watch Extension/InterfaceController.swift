@@ -89,6 +89,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             print("Watch Not Activated")
         case .inactive:
             print("Watch Inactive")
+        @unknown default:
+            print("Some other state not shown")
         }
     }
     

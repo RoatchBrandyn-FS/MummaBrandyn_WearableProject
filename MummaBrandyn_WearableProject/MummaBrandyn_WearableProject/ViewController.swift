@@ -208,6 +208,8 @@ class ViewController: UIViewController, WCSessionDelegate, UITextFieldDelegate {
             print("Phone Not Activated")
         case .inactive:
             print("Phone Inactive")
+        @unknown default:
+            print("Some other state not shown")
         }
     }
     
