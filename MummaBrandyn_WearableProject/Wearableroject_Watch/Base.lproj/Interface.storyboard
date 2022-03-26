@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -17,10 +18,16 @@
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="PLAYER 1" id="6Ln-qc-xvG">
-                            <color key="backgroundColor" red="1" green="0.2311497927" blue="0.18824437259999999" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" name="Player1Color"/>
+                            <connections>
+                                <segue destination="6O4-t9-VEU" kind="modal" identifier="p1ToDetail" id="EcG-EU-W2B"/>
+                            </connections>
                         </button>
                         <button width="1" alignment="left" title="PLAYER 2" id="ze2-yy-gug">
-                            <color key="backgroundColor" red="0.0" green="0.47945117949999999" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" name="Player2Color"/>
+                            <connections>
+                                <segue destination="6O4-t9-VEU" kind="modal" identifier="p2ToDetail" id="eWS-vB-MRN"/>
+                            </connections>
                         </button>
                     </items>
                     <connections>
@@ -32,5 +39,46 @@
             </objects>
             <point key="canvasLocation" x="90" y="345"/>
         </scene>
+        <!--Detail Interface Controller-->
+        <scene sceneID="clc-vT-WM6">
+            <objects>
+                <controller id="6O4-t9-VEU" customClass="DetailInterfaceController" customModule="Wearableroject_Watch_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Player" textAlignment="center" id="Lez-o2-EOO">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                        </label>
+                        <textField width="1" alignment="left" placeholder="Score Change" id="tTr-NV-uxG"/>
+                        <button width="1" alignment="left" title="Add" id="lIH-oh-3Fj">
+                            <color key="backgroundColor" name="PlusColor"/>
+                        </button>
+                        <button width="1" alignment="left" title="Deduct" id="o6F-lb-jz0">
+                            <color key="backgroundColor" name="MinusColor"/>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="playerLabel" destination="Lez-o2-EOO" id="G61-6N-9gu"/>
+                        <outlet property="tvScoreChange" destination="tTr-NV-uxG" id="waz-dB-4gE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="376" y="360.5"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eWS-vB-MRN"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <namedColor name="MinusColor">
+            <color red="0.0" green="0.77475374937057495" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Player1Color">
+            <color red="1" green="0.23100000619888306" blue="0.18799999356269836" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Player2Color">
+            <color red="0.0" green="0.4779999852180481" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PlusColor">
+            <color red="0.9094768762588501" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

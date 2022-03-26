@@ -93,7 +93,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.2311497927" blue="0.18824437259999999" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="Player1Color"/>
                                 <constraints>
                                     <constraint firstItem="gjG-UV-dLD" firstAttribute="top" secondItem="b9G-JT-Bok" secondAttribute="top" id="En6-sE-vQF"/>
                                     <constraint firstItem="uMq-iF-hne" firstAttribute="leading" secondItem="b9G-JT-Bok" secondAttribute="leading" id="Lsl-py-my6"/>
@@ -185,7 +185,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.47945117949999999" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="Player2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="NSa-tC-q00" secondAttribute="trailing" id="4mB-M1-4FZ"/>
                                     <constraint firstItem="jY4-sd-ODJ" firstAttribute="leading" secondItem="oPq-jG-Tv8" secondAttribute="leading" id="Iqq-L4-YGa"/>
@@ -240,6 +240,9 @@
                                 <state key="normal">
                                     <imageReference key="image" image="questionmark.circle" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="helpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fb2-SN-IGV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -287,6 +290,12 @@
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <namedColor name="ButtonViewColor">
             <color white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <namedColor name="Player1Color">
+            <color red="1" green="0.23100000619888306" blue="0.18799999356269836" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Player2Color">
+            <color red="0.0" green="0.4779999852180481" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -88,5 +88,19 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
     }
     
+    //segue callbacks
+    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
+        
+        var playerData: [String:Any] = [String: Any]()
+        
+        if segueIdentifier == "p1ToDetail"{
+            playerData = ["Name": "PLAYER 1"]
+        }
+        else if segueIdentifier == "p2ToDetail"{
+            playerData = ["Name": "PLAYER 2"]
+        }
+        
+        return playerData
+    }
     
 }

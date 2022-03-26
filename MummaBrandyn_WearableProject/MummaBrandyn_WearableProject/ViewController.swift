@@ -49,6 +49,11 @@ class ViewController: UIViewController, WCSessionDelegate, UITextFieldDelegate {
     }
     
     //actions
+    @IBAction func helpPressed(_ sender: Any) {
+        showHelpAlert()
+    }
+    
+    
     @IBAction func resetBtnPressed(_ sender: Any) {
         
         getPlayerScores()
@@ -254,6 +259,16 @@ class ViewController: UIViewController, WCSessionDelegate, UITextFieldDelegate {
     private func showEmptyAlert() {
         
         let alert = UIAlertController(title: "Problem Changing Score", message: "Either the input was empty or the value wasn't a number.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func showHelpAlert() {
+        
+        let alert = UIAlertController(title: "How to Connect Device", message: "Download the app for Apple Watch, and make sure both devices are paired before hitting connect on the Watch app.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(okAction)

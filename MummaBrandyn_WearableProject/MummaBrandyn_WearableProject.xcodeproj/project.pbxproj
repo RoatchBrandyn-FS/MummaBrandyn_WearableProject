@@ -16,6 +16,8 @@
 		5D1BB7FD27E6C37600DD6957 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BB7FC27E6C37600DD6957 /* ComplicationController.swift */; };
 		5D1BB7FF27E6C37600DD6957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1BB7FE27E6C37600DD6957 /* Assets.xcassets */; };
 		5D1BB80427E6C37600DD6957 /* Wearableroject_Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5D1BB7E527E6C37500DD6957 /* Wearableroject_Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5D73F51C27EE846700D8E17F /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D73F51B27EE846700D8E17F /* DetailInterfaceController.swift */; };
+		5D73F52027EE89E700D8E17F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1BB7EA27E6C37600DD6957 /* Assets.xcassets */; };
 		5DE62C4327E411D40095D1AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE62C4227E411D40095D1AF /* AppDelegate.swift */; };
 		5DE62C4527E411D40095D1AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE62C4427E411D40095D1AF /* SceneDelegate.swift */; };
 		5DE62C4727E411D40095D1AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE62C4627E411D40095D1AF /* ViewController.swift */; };
@@ -79,6 +81,7 @@
 		5D1BB7FE27E6C37600DD6957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1BB80027E6C37600DD6957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D1BB80127E6C37600DD6957 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		5D73F51B27EE846700D8E17F /* DetailInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
 		5DE62C3F27E411D40095D1AF /* MummaBrandyn_WearableProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MummaBrandyn_WearableProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE62C4227E411D40095D1AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DE62C4427E411D40095D1AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 				5D1BB7FE27E6C37600DD6957 /* Assets.xcassets */,
 				5D1BB80027E6C37600DD6957 /* Info.plist */,
 				5D1BB80127E6C37600DD6957 /* PushNotificationPayload.apns */,
+				5D73F51B27EE846700D8E17F /* DetailInterfaceController.swift */,
 			);
 			path = "Wearableroject_Watch Extension";
 			sourceTree = "<group>";
@@ -275,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D73F52027EE89E700D8E17F /* Assets.xcassets in Resources */,
 				5D1BB7FF27E6C37600DD6957 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +305,7 @@
 				5D1BB7FD27E6C37600DD6957 /* ComplicationController.swift in Sources */,
 				5D1BB7F927E6C37600DD6957 /* ExtensionDelegate.swift in Sources */,
 				5D1BB7F727E6C37600DD6957 /* InterfaceController.swift in Sources */,
+				5D73F51C27EE846700D8E17F /* DetailInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
