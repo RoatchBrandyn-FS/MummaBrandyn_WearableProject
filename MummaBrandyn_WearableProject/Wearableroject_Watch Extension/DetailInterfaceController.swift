@@ -56,6 +56,7 @@ class DetailInterfaceController: WKInterfaceController {
     //actions
     @IBAction func tfGetText(_ value: NSString?) {
         
+        //grabs the txt from the textField on the watch
         if let tfText = value as String? {
             print("Text Field Value: \(tfText)")
             scoreChange = tfText
@@ -63,7 +64,7 @@ class DetailInterfaceController: WKInterfaceController {
         
     }
     
-    
+    //with no tags on watch, used two different actions for each btn and two different funcs for each btn
     @IBAction func addPressed() {
         print("Add Button Pressed")
         sendMessagePlus()

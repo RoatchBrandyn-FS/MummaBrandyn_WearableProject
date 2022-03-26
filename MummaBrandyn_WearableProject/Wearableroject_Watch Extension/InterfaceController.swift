@@ -25,6 +25,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
+        
+        //starts as player btns disabled until connected to device
         disablePlayerBtns()
         
         session.delegate = self
@@ -44,6 +46,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         print("Should Connect")
         session.activate()
         
+        
+        //should set the buttons to either active or not based on the watch connection
         let message: [String: Any] = ["getData": true]
         
         if session.isReachable{
@@ -91,6 +95,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     //segue callbacks
     override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
         
+        //saves time by sending data to the detail page based on the segue
         var playerData: [String:Any] = [String: Any]()
         
         if segueIdentifier == "p1ToDetail"{

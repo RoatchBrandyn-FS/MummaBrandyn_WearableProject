@@ -289,7 +289,7 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <namedColor name="ButtonViewColor">
-            <color white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color white="0.0" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
         <namedColor name="Player1Color">
             <color red="1" green="0.23100000619888306" blue="0.18799999356269836" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
