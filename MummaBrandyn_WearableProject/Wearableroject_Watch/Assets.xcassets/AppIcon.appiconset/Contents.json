@@ -41,6 +41,7 @@
       "subtype" : "40mm"
     },
     {
+      "filename" : "app_icon_100pts.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -69,6 +70,7 @@
       "subtype" : "44mm"
     },
     {
+      "filename" : "app_icon_1024pts.png",
       "idiom" : "watch-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

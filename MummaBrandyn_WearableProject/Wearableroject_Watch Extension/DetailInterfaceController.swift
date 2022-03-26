@@ -82,17 +82,17 @@ class DetailInterfaceController: WKInterfaceController {
             let message: [String:Any] = ["watchChangePlus": true, "NewScore": scoreChange, "Player": currentPlayer]
                     
             mSession.sendMessage(message, replyHandler: nil, errorHandler: nil)
+            tvScoreChange.setText("")
         }
     }
     
     private func sendMessageMinus(){
         
-        
         if mSession.isReachable {
             let message: [String:Any] = ["watchChangeMinus": true, "NewScore": scoreChange, "Player": currentPlayer]
                     
             mSession.sendMessage(message, replyHandler: nil, errorHandler: nil)
-
+            tvScoreChange.setText("")
         }
     }
 }
